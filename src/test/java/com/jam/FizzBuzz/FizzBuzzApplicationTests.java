@@ -1,10 +1,10 @@
-package com.jam.demos.demos;
+package com.jam.FizzBuzz;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DemosApplicationTests {
+class FizzBuzzApplicationTests {
 
 	@Test
 	void contextLoads() {

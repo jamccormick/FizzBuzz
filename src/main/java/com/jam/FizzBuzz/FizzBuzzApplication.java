@@ -1,13 +1,13 @@
-package com.jam.demos.demos;
+package com.jam.FizzBuzz;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DemosApplication {
+public class FizzBuzzApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemosApplication.class, args);
+		SpringApplication.run(FizzBuzzApplication.class, args);
 	}
 
 }
