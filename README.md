@@ -1,10 +1,10 @@
-#Common Interviewing Questions
+# Common Interviewing Questions
 
 I'm beginning some work on a website that will eventually have a series of common interviewing questions placed on it.  
 
 The reason is simple: I would rather get to the meat and potatoes of an interview rather than sit and whiteboard.  As an interviewer, I presume you have questions about the code I'm going to write.  Therefore, I'm giving you, the interviewer, more time to ask questions by giving you the answers to the coding questions you're most likely to ask.
 
-#FizzBuzz
+# FizzBuzz
 
 This one is perhaps the single most commonly asked question in programming interviews.  I've leveraged a database for the purposes of ensuring ease of modification.  Right now, it's in an MVP state.  Future enhancements include:
 
@@ -12,7 +12,7 @@ This one is perhaps the single most commonly asked question in programming inter
 * A React-based frontend for the CRUD elements
 * Containerization via Docker
 
-#Fibonacci
+# Fibonacci
 
 I've solved this in two methods: recursively using a cache and iteratively.  I *could* sidestep the cache for the recursive mechanism, but you should realize that the time complexity of that particular operation is O(e^n).  While I can't stop the call stack from exploding, I can make each entry into a random access lookup through the use of a hash table.  So I did.
 
