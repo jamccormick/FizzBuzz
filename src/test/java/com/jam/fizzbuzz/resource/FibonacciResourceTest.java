@@ -24,11 +24,11 @@ public class FibonacciResourceTest {
     @Test
     public void theTwoImplementationsShouldMatch(){
         ReflectionTestUtils.setField(service, "fibonaccis", new HashMap(){{
-            put(0, 0);
-            put(1, 1);
+            put(0, 0L);
+            put(1, 1L);
         }});
         Mockito.when(service.calculateFibonaccisIteratively(Mockito.anyInt())).thenCallRealMethod();
         Mockito.when(service.calculateFibonaccisRecursively(Mockito.anyInt())).thenCallRealMethod();
-        Assertions.assertEquals(resource.fibonacci(), resource.fibonacciResursive());
+        Assertions.assertEquals(resource.fibonacci(10), resource.fibonacciResursive(10));
     }
 }

@@ -24,6 +24,6 @@ public class FizzBuzzResourceTest {
     @Test
     public void shouldReturnAListOfFizzbuzzedStuff(){
         Mockito.when(service.playFizzBuzz(100)).thenReturn(new ArrayList<>());
-        Assert.assertEquals(new ArrayList<String>(), resource.playFizzBuzz());
+        Assert.assertEquals(new ArrayList<String>(), resource.playFizzBuzz(100));
     }
 }

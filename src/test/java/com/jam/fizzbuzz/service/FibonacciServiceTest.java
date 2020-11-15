@@ -11,14 +11,14 @@ import java.util.List;
 
 @ExtendWith(MockitoExtension.class)
 public class FibonacciServiceTest {
-    private static final List<Integer> EXPECTED = new ArrayList<>(){{
-        add(1);
-        add(1);
-        add(2);
-        add(3);
-        add(5);
-        add(8);
-        add(13);
+    private static final List<Long> EXPECTED = new ArrayList<>(){{
+        add(1L);
+        add(1L);
+        add(2L);
+        add(3L);
+        add(5L);
+        add(8L);
+        add(13L);
     }};
 
     @InjectMocks
