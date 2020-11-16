@@ -1,4 +1,4 @@
-package com.jam.fizzbuzz.resource;
+package com.jam.fizzbuzz.controller;
 
 import com.jam.fizzbuzz.service.FibonacciService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-public class FibonacciResource {
+public class FibonacciController {
 
     @Autowired
     private FibonacciService service;

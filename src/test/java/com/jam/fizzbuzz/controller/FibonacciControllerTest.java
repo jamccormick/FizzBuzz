@@ -1,4 +1,4 @@
-package com.jam.fizzbuzz.resource;
+package com.jam.fizzbuzz.controller;
 
 import com.jam.fizzbuzz.service.FibonacciService;
 import org.junit.jupiter.api.Assertions;
@@ -13,10 +13,10 @@ import org.springframework.test.util.ReflectionTestUtils;
 import java.util.HashMap;
 
 @ExtendWith(MockitoExtension.class)
-public class FibonacciResourceTest {
+public class FibonacciControllerTest {
 
     @InjectMocks
-    private FibonacciResource resource;
+    private FibonacciController resource;
 
     @Mock
     private FibonacciService service;

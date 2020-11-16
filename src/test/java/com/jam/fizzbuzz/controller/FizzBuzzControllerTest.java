@@ -1,4 +1,4 @@
-package com.jam.fizzbuzz.resource;
+package com.jam.fizzbuzz.controller;
 
 import com.jam.fizzbuzz.service.FizzBuzzService;
 import org.junit.Assert;
@@ -12,10 +12,10 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.util.ArrayList;
 
 @ExtendWith(MockitoExtension.class)
-public class FizzBuzzResourceTest {
+public class FizzBuzzControllerTest {
 
     @InjectMocks
-    private FizzBuzzResource resource;
+    private FizzBuzzController resource;
 
     @Mock
     private FizzBuzzService service;
