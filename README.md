@@ -17,3 +17,11 @@ This one is perhaps the single most commonly asked question in programming inter
 I've solved this in two methods: recursively using a cache and iteratively.  I *could* sidestep the cache for the recursive mechanism, but you should realize that the time complexity of that particular operation is O(e^n).  While I can't stop the call stack from exploding, I can make each entry into a random access lookup through the use of a hash table.  So I did.
 
 The iterative version has linear time complexity.  It is, therefore, the preferred solution.
+
+# Quicksort
+
+This particular question should be deprecated.  It's not the best way to handle sorting in Java--or any language with built-in collection types, for that matter.  It is better to implement Comparable and use the built-in sorting function.  Why?  Because Java uses [Timsort](https://en.wikipedia.org/wiki/Timsort), which sidesteps Quicksort's worst case time complexity scenario (which happens when you choose a pivot that is an extreme).  This solution does not attempt to do any serious work at mitigating the worst case performance scenario, which produces O(n^2) time complexity.  
+
+I suspect it's still commonly asked because it *does* require a grasp of recursion.  And because it's still very common, I've included a solution here.
+
+I took pains to preserve the original array so that you can compare the sorted and unsorted forms.  
