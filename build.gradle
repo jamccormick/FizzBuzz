@@ -25,6 +25,7 @@ dependencies {
 	runtimeOnly 'io.micrometer:micrometer-registry-prometheus'
 	runtimeOnly 'org.postgresql:postgresql'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	compile group: 'org.yaml', name: 'snakeyaml', version: '1.8'
 }
 
 test {
