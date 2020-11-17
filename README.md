@@ -4,6 +4,8 @@ I'm beginning some work on a website that will eventually have a series of commo
 
 The reason is simple: I would rather get to the meat and potatoes of an interview rather than sit and whiteboard.  As an interviewer, I presume you have questions about the code I'm going to write.  Therefore, I'm giving you, the interviewer, more time to ask questions by giving you the answers to the coding questions you're most likely to ask.
 
+Is this a bit of self-gratification on my part?  You bet.  I'll openly state the absurdity of what I'm doing here: taking a simple question and complicating it to an absurd extreme.  But hey, it's a chance to play with Java 15, Spring, and even eventually write a frontend, because I don't do that very often.  
+
 # FizzBuzz
 
 This one is perhaps the single most commonly asked question in programming interviews.  I've leveraged a database for the purposes of ensuring ease of modification.  Right now, it's in an MVP state.  Future enhancements include:
