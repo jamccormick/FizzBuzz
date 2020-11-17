@@ -10,11 +10,11 @@ public class SessionTest {
     @Test
     public void shouldCreateASession(){
         Session s = new Session();
-        s.setSessionEntries(new ArrayList<>());
+        s.setFizzBuzzes(new ArrayList<>());
         s.setSessionId("default");
         s.setSessionKey(1);
         s.setExpirationDate(new Date(0L));
-        Assertions.assertEquals(new ArrayList<>(), s.getSessionEntries());
+        Assertions.assertEquals(new ArrayList<>(), s.getFizzBuzzes());
         Assertions.assertEquals("default", s.getSessionId());
         Assertions.assertEquals(1, s.getSessionKey());
         Assertions.assertEquals(new Date(0L), s.getExpirationDate());

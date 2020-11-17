@@ -2,7 +2,6 @@ package com.jam.fizzbuzz.repository;
 
 import com.jam.fizzbuzz.entity.FizzBuzz;
 import com.jam.fizzbuzz.entity.Session;
-import com.jam.fizzbuzz.entity.SessionEntry;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
@@ -18,8 +17,7 @@ public interface SessionRepository extends CrudRepository<Session, Integer> {
 
     default List<FizzBuzz> retrieveFizzBuzzesForSession(String sessionId){
         Session s = retrieveSessionData(sessionId);
-        return s.getSessionEntries().stream()
-                .map(SessionEntry::getFizzBuzz)
+        return s.getFizzBuzzes().stream()
                 .sorted()
                 .collect(Collectors.toList());
     }

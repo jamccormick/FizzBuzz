@@ -26,10 +26,10 @@ public class Session {
     private Date expirationDate;
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<SessionEntry> sessionEntries;
+    private List<FizzBuzz> fizzBuzzes;
 
-    public List<SessionEntry> getSessionEntries() {
-        return sessionEntries;
+    public void setFizzBuzzes(List<FizzBuzz> fizzBuzzes) {
+        this.fizzBuzzes = fizzBuzzes;
     }
 
     public void setSessionKey(int sessionKey) {
@@ -44,8 +44,8 @@ public class Session {
         return sessionId;
     }
 
-    public void setSessionEntries(List<SessionEntry> sessionEntries) {
-        this.sessionEntries = sessionEntries;
+    public List<FizzBuzz> getFizzBuzzes() {
+        return fizzBuzzes;
     }
 
     public void setSessionId(String sessionId) {
