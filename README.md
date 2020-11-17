@@ -8,7 +8,7 @@ Is this a bit of self-gratification on my part?  You bet.  I'll openly state the
 
 # FizzBuzz
 
-This one is perhaps the single most commonly asked question in programming interviews.  I've leveraged a database for the purposes of ensuring ease of modification.  Right now, it's in an MVP state.  Future enhancements include:
+This one is perhaps the single most commonly asked question in programming interviews.  I've leveraged a database for the purposes of ensuring ease of modification.  Right now, it's in a pre-MVP state.  Future enhancements include:
 
 * Per-user value additions and substitution changes.  One of the most common follow-up questions here is about modifying the behavior of FizzBuzz.  And after a decade of thinking way too long and hard about it (because I think about it every time it comes up on /r/programming because there's *someone* claiming to be unable to whiteboard FizzBuzz).  I want you to be able to modify the output of FizzBuzz without my intervention.  There will be a CRUD system forthcoming.
 * A React-based frontend for the CRUD elements
