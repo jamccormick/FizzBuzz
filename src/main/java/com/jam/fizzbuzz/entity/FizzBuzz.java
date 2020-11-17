@@ -2,13 +2,14 @@ package com.jam.fizzbuzz.entity;
 
 import javax.persistence.*;
 
-@Entity
-public class FizzBuzz implements Comparable{
+@Entity(name="FizzBuzz")
+@Table(name="FIZZ_BUZZ")
+public class FizzBuzz implements Comparable<FizzBuzz>{
 
     @Id
     @GeneratedValue
-    @Column(name="ipk", nullable = false)
-    private int ipk;
+    @Column(name="fizzBuzzKey", nullable = false)
+    private int fizzBuzzKey;
     @Column(name="counter", nullable = false)
     private int counter;
     @Column(name="replacement", nullable = false)
@@ -24,12 +25,12 @@ public class FizzBuzz implements Comparable{
         this.ordinal = ordinal;
     }
 
-    public Integer getIpk(){
-        return ipk;
+    public Integer getFizzBuzzKey(){
+        return fizzBuzzKey;
     }
 
-    public void setIpk(int ipk){
-        this.ipk = ipk;
+    public void setFizzBuzzKey(int fizzBuzzKey){
+        this.fizzBuzzKey = fizzBuzzKey;
     }
 
     public void setCounter(Integer counter){
@@ -57,11 +58,16 @@ public class FizzBuzz implements Comparable{
     }
 
     @Override
-    public int compareTo(Object o) {
+    public int compareTo(FizzBuzz other) {
+        return Integer.compare(this.ordinal, other.ordinal);
+    }
+
+    @Override
+    public boolean equals(Object o){
         if(!(o instanceof FizzBuzz)){
-            throw new IllegalArgumentException("Don't try to compare something that isn't of the right class");
+            throw new IllegalArgumentException("The types don't match");
         }
         FizzBuzz other = (FizzBuzz) o;
-        return Integer.compare(this.ordinal, other.ordinal);
+        return this.counter == other.counter && this.ordinal == other.ordinal && this.replacement.equals(other.replacement);
     }
 }

@@ -13,7 +13,7 @@ public interface FizzBuzzRepository extends CrudRepository<FizzBuzz, Integer> {
     @Query(value = "SELECT fizzbuzz FROM FizzBuzz fizzbuzz order by fizzbuzz.ordinal")
     List<FizzBuzz> retrieveAllElements();
 
-    @Query(value = "SELECT fizzbuzz FROM FizzBuzz fizzbuzz where fizzbuzz.ipk = ?1")
+    @Query(value = "SELECT fizzbuzz FROM FizzBuzz fizzbuzz where fizzbuzz.fizzBuzzKey = ?1")
     FizzBuzz findById();
 
 }

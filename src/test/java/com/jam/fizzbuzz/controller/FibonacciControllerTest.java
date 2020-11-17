@@ -23,7 +23,7 @@ public class FibonacciControllerTest {
 
     @Test
     public void theTwoImplementationsShouldMatch(){
-        ReflectionTestUtils.setField(service, "fibonaccis", new HashMap(){{
+        ReflectionTestUtils.setField(service, "fibonaccis", new HashMap<Integer, Long>(){{
             put(0, 0L);
             put(1, 1L);
         }});

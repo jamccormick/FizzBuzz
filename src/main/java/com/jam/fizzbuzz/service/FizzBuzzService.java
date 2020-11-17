@@ -2,6 +2,7 @@ package com.jam.fizzbuzz.service;
 
 import com.jam.fizzbuzz.entity.FizzBuzz;
 import com.jam.fizzbuzz.repository.FizzBuzzRepository;
+import com.jam.fizzbuzz.repository.SessionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +14,7 @@ import java.util.stream.Stream;
 public class FizzBuzzService {
 
     @Autowired
-    private FizzBuzzRepository repo;
+    private SessionRepository repo;
 
     private String replace(int value, FizzBuzz fizzBuzz){
         return value % fizzBuzz.getCounter() == 0 ? fizzBuzz.getReplacement() : "";
@@ -29,7 +30,7 @@ public class FizzBuzzService {
     }
 
     public List<String> playFizzBuzz(int size){
-        List<FizzBuzz> buzzer = repo.retrieveAllElements();
+        List<FizzBuzz> buzzer = repo.retrieveFizzBuzzesForSession("default");
         return Stream.iterate(1, i -> i+1).limit(size).map(i -> replace(i, buzzer)).collect(Collectors.toList());
     }
 }

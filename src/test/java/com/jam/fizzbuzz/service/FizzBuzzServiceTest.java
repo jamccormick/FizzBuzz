@@ -2,6 +2,7 @@ package com.jam.fizzbuzz.service;
 
 import com.jam.fizzbuzz.entity.FizzBuzz;
 import com.jam.fizzbuzz.repository.FizzBuzzRepository;
+import com.jam.fizzbuzz.repository.SessionRepository;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.jupiter.api.Assertions;
@@ -28,7 +29,7 @@ public class FizzBuzzServiceTest {
     private FizzBuzzService service;
 
     @Mock
-    private FizzBuzzRepository repo;
+    private SessionRepository repo;
 
     @Test
     public void shouldSuccessfullyReplaceA3(){
@@ -57,7 +58,7 @@ public class FizzBuzzServiceTest {
 
     @Test
     public void shouldPlayFizzBuzzTo15(){
-        Mockito.when(repo.retrieveAllElements()).thenReturn(BUZZER);
+        Mockito.when(repo.retrieveFizzBuzzesForSession(Mockito.anyString())).thenReturn(BUZZER);
         List<String> expected = new ArrayList<>(){{
             add("1");
             add("2");
